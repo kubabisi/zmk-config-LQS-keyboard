@@ -1,0 +1,5 @@
+config SHIELD_LQS_KEYBOARD
+    def_bool $(shields_list_contains,lqs_keyboard_left)
+
+config SHIELD_LQS_KEYBOARD_RIGHT
+    def_bool $(shields_list_contains,lqs_keyboard_right)

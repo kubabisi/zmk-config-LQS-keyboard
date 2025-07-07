@@ -1,0 +1,12 @@
+file_format: "1"
+id: lqs_keyboard
+name: LQS keyboard
+type: shield
+url: https://github.com/kubabisi/LQS-keyboard
+requires:
+  - pro_micro
+features:
+  - keys
+siblings:
+  - lqs_keyboard_left
+  - lqs_keyboard_right
