@@ -19,13 +19,12 @@
         ;
 };
 
-
 &ledr {
-    gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+    gpios = <&pro_micro 19 GPIO_ACTIVE_HIGH>;
 };
 &ledg {
-    gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
+    gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
 };
 &ledb{
-    gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
+    gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;
 };
