@@ -1,4 +1,4 @@
-config SHIELD_LQS_KEYBOARD
+config SHIELD_LQS_KEYBOARD_LEFT
     def_bool $(shields_list_contains,lqs_keyboard_left)
 
 config SHIELD_LQS_KEYBOARD_RIGHT
