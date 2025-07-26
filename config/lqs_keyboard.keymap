@@ -6,9 +6,8 @@
 
 #include "keys_pl_programmers.h"
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -21,11 +20,10 @@
 //  +--------+ 50 51 52 53 |     | 54 55 56 57 +--------+
 //           +-------------+     +-------------+
 
-#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 
+#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49
 #define THUMB_L 50 51 52 53 42
 #define THUMB_R 54 55 56 57 43
-
 #define BASE 0
 #define QWERTY 1
 #define SYM 2
@@ -67,66 +65,61 @@
 
         base {
             bindings = <
-&kp ESC           &kp N1          &kp N2          &kp N3           &kp N4            &kp N5                                  &kp N6         &kp N7            &kp N8           &kp N9          &kp N0          &tog 1
-&kp TAB           &kp PL_Q        &kp PL_W        &kp PL_F         &kp PL_P          &kp PL_B                                &kp PL_J       &kp PL_L          &kp PL_U         &kp PL_Y        &kp PL_SEMI     &kp PL_MINUS
-&kp LEFT_SHIFT    &hml LGUI PL_A  &hml LALT PL_R  &hml LCTRL PL_S  &hml LSHIFT PL_T  &kp PL_G                                &kp PL_M       &hmr RSHIFT PL_N  &hmr RCTRL PL_E  &hmr RALT PL_I  &hmr RGUI PL_O  &kp RSHIFT
-&kp LEFT_CONTROL  &kp PL_Z        &kp PL_X        &kp PL_C         &kp PL_D          &kp PL_V  &trans         &mo 4          &kp PL_K       &kp PL_H          &kp PL_COMMA     &kp PL_DOT      &kp PL_FSLH     &kp RIGHT_CONTROL
-                                                  &trans           &mo 3             &kp SPACE &kp DEL        &kp BACKSPACE  &kp ENTER      &mo 2             &mo 5
-                                    
+&kp ESC           &kp N1          &kp N2          &kp N3           &kp N4            &kp N5                               &kp N6     &kp N7            &kp N8           &kp N9          &kp N0          &tog 1
+&kp TAB           &kp PL_Q        &kp PL_W        &kp PL_F         &kp PL_P          &kp PL_B                             &kp PL_J   &kp PL_L          &kp PL_U         &kp PL_Y        &kp PL_SEMI     &kp PL_MINUS
+&kp LEFT_SHIFT    &hml LGUI PL_A  &hml LALT PL_R  &hml LCTRL PL_S  &hml LSHIFT PL_T  &kp PL_G                             &kp PL_M   &hmr RSHIFT PL_N  &hmr RCTRL PL_E  &hmr RALT PL_I  &hmr RGUI PL_O  &kp RSHIFT
+&kp LEFT_CONTROL  &kp PL_Z        &kp PL_X        &kp PL_C         &kp PL_D          &kp PL_V   &trans     &mo 4          &kp PL_K   &kp PL_H          &kp PL_COMMA     &kp PL_DOT      &kp PL_FSLH     &kp RIGHT_CONTROL
+                                                  &trans           &mo 3             &kp SPACE  &kp DEL    &kp BACKSPACE  &kp ENTER  &mo 2             &mo 5
             >;
         };
 
         qwerty {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                   &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &tog 1
-&kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                    &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
-&kp LSHIFT  &kp A   &kp S   &kp D   &kp F   &kp G                    &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp RSHIFT
-&kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans   &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
-                            &trans  &trans  &trans  &trans   &trans  &trans  &trans     &trans
-
+&kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &tog 1
+&kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&kp LSHIFT  &kp A   &kp S   &kp D   &kp F   &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp RSHIFT
+&kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
+                            &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
 
         sym {
             bindings = <
-&trans  &trans     &trans       &trans       &trans             &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp PL_LBKT  &kp PL_RBKT  &kp PL_DQT         &kp PL_MINUS                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp PL_GT  &kp PL_LPAR  &kp PL_RPAR  &kp PL_UNDERSCORE  &kp PL_EQUAL                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LT     &kp PL_LBRC  &kp PL_RBRC  &kp PL_APOS        &kp PL_PLUS  &trans  &trans &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans       &trans             &trans       &trans  &trans &trans  &trans  &trans
+&trans  &trans     &trans       &trans       &trans             &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp PL_LBKT  &kp PL_RBKT  &kp PL_DQT         &kp PL_MINUS                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp PL_GT  &kp PL_LPAR  &kp PL_RPAR  &kp PL_UNDERSCORE  &kp PL_EQUAL                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LT     &kp PL_LBRC  &kp PL_RBRC  &kp PL_APOS        &kp PL_PLUS   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans       &trans             &trans        &trans    &trans  &trans  &trans  &trans
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans    &trans    &trans     &trans      &trans  &trans  &trans          &trans          &trans        &trans           &trans
-&trans  &trans    &mkp MB3  &mkp MB2   &mkp MB1    &trans  &trans  &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans  &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans
-&trans  &trans    &trans    &trans     &trans      &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-                  &trans    &trans     &trans      &trans  &trans  &trans          &trans          &trans
-                                       &trans                      &trans
+&trans  &trans    &trans    &trans     &trans      &trans                            &trans          &trans        &trans           &trans     &trans     &trans
+&trans  &trans    &mkp MB3  &mkp MB2   &mkp MB1    &trans                            &trans          &kp HOME      &kp PG_DN        &kp PG_UP  &kp END    &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans                            &trans          &kp LEFT      &kp DOWN         &kp UP     &kp RIGHT  &trans
+&trans  &trans    &trans    &trans     &trans      &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans     &trans     &trans
+                            &trans     &trans      &trans  &trans    &trans          &trans          &trans        &trans
             >;
         };
 
         dia {
             bindings = <
-&trans  &trans               &trans          &trans                 &trans  &trans                  &trans  &trans                  &trans                &trans  &trans                &trans
-&trans  &trans               &trans          &trans                 &trans  &trans                  &trans  &kp PL_L_STROKE         &trans                &trans  &trans                &trans
-&trans  &hml LGUI PL_A_OGON  &trans          &hml LCTRL PL_S_ACUTE  &trans  &trans                  &trans  &hmr RSHIFT PL_N_ACUTE  &hmr RCTRL PL_E_OGON  &trans  &hmr RGUI PL_O_ACUTE  &trans
-&trans  &kp PL_Z_DOT         &kp PL_Z_ACUTE  &kp PL_C_ACUTE         &trans  &trans  &trans  $trans  &trans  &trans                  &trans                &trans  &trans                &trans
-                                             &trans                 &tran   &trans  &trans  &trans  &trans  &trans                  &trans
-
+&trans  &trans               &trans          &trans                 &trans  &trans                    &trans  &trans                  &trans                &trans  &trans                &trans
+&trans  &trans               &trans          &trans                 &trans  &trans                    &trans  &kp PL_L_STROKE         &trans                &trans  &trans                &trans
+&trans  &hml LGUI PL_A_OGON  &trans          &hml LCTRL PL_S_ACUTE  &trans  &trans                    &trans  &hmr RSHIFT PL_N_ACUTE  &hmr RCTRL PL_E_OGON  &trans  &hmr RGUI PL_O_ACUTE  &trans
+&trans  &kp PL_Z_DOT         &kp PL_Z_ACUTE  &kp PL_C_ACUTE         &trans  &trans  &trans    &trans  &trans  &trans                  &trans                &trans  &trans                &trans
+                                             &trans                 &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         conf {
             bindings = <
-&bt BT_CLR   &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans         &trans         &trans         &trans         &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans         &trans         &out OUT_USB   &out OUT_USB   &out OUT_TOG  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
-                                           &trans         &trans         &trans        &trans  &trans  &trans  &trans  &trans
-
+&bt BT_CLR   &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans         &trans         &trans         &trans         &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &trans         &trans         &out OUT_USB   &out OUT_USB   &out OUT_TOG   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
+                                           &trans         &trans         &trans         &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
