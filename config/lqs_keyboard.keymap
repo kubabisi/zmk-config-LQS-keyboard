@@ -65,21 +65,31 @@
 
         base {
             bindings = <
-&kp ESC           &kp N1          &kp N2          &kp N3           &kp N4            &kp N5                               &kp N6     &kp N7            &kp N8           &kp N9          &kp N0          &tog 1
+&kp ESC           &kp N1          &kp N2          &kp N3           &kp N4            &kp N5                               &kp N6     &kp N7            &kp N8           &kp N9          &kp N0          &trans
 &kp TAB           &kp PL_Q        &kp PL_W        &kp PL_F         &kp PL_P          &kp PL_B                             &kp PL_J   &kp PL_L          &kp PL_U         &kp PL_Y        &kp PL_SEMI     &kp PL_MINUS
-&kp LEFT_SHIFT    &hml LGUI PL_A  &hml LALT PL_R  &hml LCTRL PL_S  &hml LSHIFT PL_T  &kp PL_G                             &kp PL_M   &hmr RSHIFT PL_N  &hmr RCTRL PL_E  &hmr RALT PL_I  &hmr RGUI PL_O  &kp RSHIFT
-&kp LEFT_CONTROL  &kp PL_Z        &kp PL_X        &kp PL_C         &kp PL_D          &kp PL_V   &trans     &mo 4          &kp PL_K   &kp PL_H          &kp PL_COMMA     &kp PL_DOT      &kp PL_FSLH     &kp RIGHT_CONTROL
-                                                  &trans           &mo 3             &kp SPACE  &kp DEL    &kp BACKSPACE  &kp ENTER  &mo 2             &mo 5
+&kp LEFT_SHIFT    &hml LGUI PL_A  &hml LALT PL_R  &hml LCTRL PL_S  &hml LSHIFT PL_T  &kp PL_G                             &kp PL_M   &hmr RSHIFT PL_N  &hmr RCTRL PL_E  &hmr LALT PL_I  &hmr RGUI PL_O  &kp RSHIFT
+&kp LEFT_CONTROL  &kp PL_Z        &kp PL_X        &kp PL_C         &kp PL_D          &kp PL_V   &trans     &trans         &kp PL_K   &kp PL_H          &kp PL_COMMA     &kp PL_DOT      &kp PL_FSLH     &kp RIGHT_CONTROL
+                                                  &trans           &mo 4             &kp SPACE  &kp DEL    &kp BACKSPACE  &kp ENTER  &kp RALT          &mo 5
             >;
         };
 
         qwerty {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &tog 1
+&kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &trans
 &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
 &kp LSHIFT  &kp A   &kp S   &kp D   &kp F   &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp RSHIFT
 &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
                             &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        dia {
+            bindings = <
+&trans  &trans               &trans          &trans                 &trans  &trans                    &trans  &trans                  &trans                &trans  &trans                &trans
+&trans  &trans               &trans          &trans                 &trans  &trans                    &trans  &kp PL_L_STROKE         &trans                &trans  &trans                &trans
+&trans  &hml LGUI PL_A_OGON  &trans          &hmr LCTRL PL_S_ACUTE  &trans  &trans                    &trans  &hmr RSHIFT PL_N_ACUTE  &hmr RCTRL PL_E_OGON  &trans  &hmr RGUI PL_O_ACUTE  &trans
+&trans  &kp PL_Z_DOT         &kp PL_Z_ACUTE  &trans                 &trans  &trans  &trans    &trans  &trans  &trans                  &trans                &trans  &trans                &trans
+                                             &trans                 &trans  &trans  &trans    &trans  &trans  &trans                  &trans
             >;
         };
 
@@ -95,21 +105,11 @@
 
         nav {
             bindings = <
-&trans  &trans    &trans    &trans     &trans      &trans                     &trans  &trans          &trans          &trans        &trans           &trans
-&trans  &trans    &mkp MB3  &mkp MB2   &mkp MB1    &trans                     &trans  &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans                     &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans
-&trans  &trans    &trans    &trans     &trans      &trans  &trans    &trans   &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-                            &trans     &trans      &trans  &trans    &trans   &trans  &trans  &trans
-            >;
-        };
-
-        dia {
-            bindings = <
-&trans  &trans               &trans          &trans                 &trans  &trans                    &trans  &trans                  &trans                &trans  &trans                &trans
-&trans  &trans               &trans          &trans                 &trans  &trans                    &trans  &kp PL_L_STROKE         &trans                &trans  &trans                &trans
-&trans  &hml LGUI PL_A_OGON  &trans          &hml LCTRL PL_S_ACUTE  &trans  &trans                    &trans  &hmr RSHIFT PL_N_ACUTE  &hmr RCTRL PL_E_OGON  &trans  &hmr RGUI PL_O_ACUTE  &trans
-&trans  &kp PL_Z_DOT         &kp PL_Z_ACUTE  &kp PL_C_ACUTE         &trans  &trans  &trans    &trans  &trans  &trans                  &trans                &trans  &trans                &trans
-                                             &trans                 &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans      &trans                    &trans  &trans          &trans          &trans        &trans           &trans
+&trans  &trans    &mkp MB3  &mkp MB2   &mkp MB1    &trans                    &trans  &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans                    &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans
+&trans  &trans    &trans    &trans     &trans      &trans  &trans    &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+                            &trans     &trans      &trans  &trans    &trans  &trans  &trans          &trans
             >;
         };
 
@@ -117,7 +117,7 @@
             bindings = <
 &bt BT_CLR   &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans         &trans         &trans         &trans         &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans         &trans         &trans         &tog 1         &trans                           &trans  &trans  &trans  &trans  &trans  &trans
 &bootloader  &trans         &trans         &out OUT_USB   &out OUT_USB   &out OUT_TOG   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
                                            &trans         &trans         &trans         &trans    &trans  &trans  &trans  &trans
             >;
