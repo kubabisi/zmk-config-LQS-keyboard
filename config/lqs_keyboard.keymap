@@ -5,11 +5,13 @@
  */
 
 #include "keys_pl_programmers.h"
+#include "keys_colemak.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <behaviors/rgbled_widget.dtsi>
 
 // key numbering
 //  +-------------------+           +-------------------+
@@ -24,12 +26,7 @@
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49
 #define THUMB_L 50 51 52 53 42
 #define THUMB_R 54 55 56 57 43
-#define BASE 0
-#define QWERTY 1
-#define SYM 2
-#define NAV 3
-#define DIA 4
-#define CONF 5
+
 
 / {
     behaviors {
@@ -65,18 +62,18 @@
 
         base_col {
             bindings = <
-&kp ESC           &kp N1          &kp N2          &kp N3           &kp N4            &kp N5                               &kp N6     &kp N7            &kp N8           &kp N9          &kp N0          &trans
-&kp TAB           &kp PL_Q        &kp PL_W        &kp PL_F         &kp PL_P          &kp PL_B                             &kp PL_J   &kp PL_L          &kp PL_U         &kp PL_Y        &kp PL_SEMI     &kp PL_MINUS
-&kp LEFT_SHIFT    &hml LGUI PL_A  &hml LALT PL_R  &hml LCTRL PL_S  &hml LSHIFT PL_T  &kp PL_G                             &kp PL_M   &hmr RSHIFT PL_N  &hmr RCTRL PL_E  &hmr LALT PL_I  &hmr RGUI PL_O  &kp RSHIFT
-&kp LEFT_CONTROL  &kp PL_Z        &kp PL_X        &kp PL_C         &kp PL_D          &kp PL_V   &trans     &trans         &kp PL_K   &kp PL_H          &kp PL_COMMA     &kp PL_DOT      &kp PL_FSLH     &kp RIGHT_CONTROL
-                                                  &trans           &mo 5             &kp SPACE  &kp DEL    &kp BACKSPACE  &kp ENTER  &mo 3             &mo 6
+&kp ESC           &kp N1           &kp N2           &kp N3            &kp N4             &kp N5                                &kp N6      &kp N7             &kp N8            &kp N9           &kp N0           &trans
+&kp TAB           &kp COL_Q        &kp COL_W        &kp COL_F         &kp COL_P          &kp COL_B                             &kp COL_J   &kp COL_L          &kp COL_U         &kp COL_Y        &kp COL_SEMI     &kp MINUS
+&kp LEFT_SHIFT    &hml LGUI COL_A  &hml LALT COL_R  &hml LCTRL COL_S  &hml LSHIFT COL_T  &kp COL_G                             &kp COL_M   &hmr RSHIFT COL_N  &hmr RCTRL COL_E  &hmr LALT COL_I  &hmr RGUI COL_O  &kp RSHIFT
+&kp LEFT_CONTROL  &kp COL_Z        &kp COL_X        &kp COL_C         &kp COL_D          &kp COL_V   &trans     &trans         &kp COL_K   &kp COL_H          &kp COL_COMMA     &kp COL_DOT      &kp COL_FSLH     &kp RIGHT_CONTROL
+                                                    &trans            &mo 5              &kp SPACE   &kp DEL    &kp BACKSPACE  &kp ENTER   &mo 3              &mo 6
             >;
         };
 
         base_qwe {
             bindings = <
 &kp ESC           &kp N1          &kp N2          &kp N3           &kp N4            &kp N5                      &kp N6    &kp N7            &kp N8           &kp N9          &kp N0          &trans
-&kp TAB           &kp PL_Q        &kp PL_W        &kp PL_F         &kp PL_P          &kp PL_B                    &kp PL_J  &kp PL_L          &kp PL_U         &kp PL_Y        &kp PL_SEMI     &kp PL_MINUS
+&kp TAB           &kp PL_Q        &kp PL_W        &kp PL_F         &kp PL_P          &kp PL_B                    &kp PL_J  &kp PL_L          &kp PL_U         &kp PL_Y        &kp PL_SEMI     &kp MINUS
 &kp LEFT_SHIFT    &hml LGUI PL_A  &hml LALT PL_R  &hml LCTRL PL_S  &hml LSHIFT PL_T  &kp PL_G                    &kp PL_M  &hmr RSHIFT PL_N  &hmr RCTRL PL_E  &hmr LALT PL_I  &hmr RGUI PL_O  &kp RSHIFT
 &kp LEFT_CONTROL  &kp PL_Z        &kp PL_X        &kp PL_C         &kp PL_D          &kp PL_V  &trans    &trans  &kp PL_K  &kp PL_H          &kp PL_COMMA     &kp PL_DOT      &kp PL_FSLH     &kp RIGHT_CONTROL
                                                   &trans           &trans            &trans    &trans    &trans  &trans    &kp RALT          &trans
