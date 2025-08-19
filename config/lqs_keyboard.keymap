@@ -177,11 +177,11 @@
 
         base_col {
             bindings = <
-&kp ESC           &kp N1           &kp N2           &kp N3            &kp N4             &kp N5                               &kp N6     &kp N7             &kp N8            &kp N9           &kp N0           &trans
-&kp TAB           &kp COL_Q        &kp COL_W        &kp COL_F         &kp COL_P          &kp COL_B                            &kp COL_J  &kp COL_L          &kp COL_U         &kp COL_Y        &kp COL_SEMI     &kp MINUS
-&kp LEFT_SHIFT    &hml LGUI COL_A  &hml LALT COL_R  &hml LCTRL COL_S  &hml LSHIFT COL_T  &kp COL_G                            &kp COL_M  &hmr RSHIFT COL_N  &hmr RCTRL COL_E  &hmr LALT COL_I  &hmr RGUI COL_O  &kp RSHIFT
-&kp LEFT_CONTROL  &kp COL_Z        &kp COL_X        &kp COL_C         &kp COL_D          &kp COL_V  &trans     &trans         &kp COL_K  &kp COL_H          &kp COL_COMMA     &kp COL_DOT      &kp COL_FSLH     &kp RIGHT_CONTROL
-                                                    &trans            &mo 5              &kp SPACE  &kp DEL    &kp BACKSPACE  &kp ENTER  &mo 3              &mo 6
+&kp ESC           &kp N1           &kp N2           &kp N3            &kp N4             &kp N5                                   &kp N6       &kp N7             &kp N8            &kp N9           &kp N0           &trans
+&kp TAB           &kp COL_Q        &kp COL_W        &kp COL_F         &kp COL_P          &kp COL_B                                &kp COL_J    &kp COL_L          &kp COL_U         &kp COL_Y        &kp COL_SEMI     &kp MINUS
+&kp LEFT_SHIFT    &hml LGUI COL_A  &hml LALT COL_R  &hml LCTRL COL_S  &hml LSHIFT COL_T  &kp COL_G                                &kp COL_M    &hmr RSHIFT COL_N  &hmr RCTRL COL_E  &hmr LALT COL_I  &hmr RGUI COL_O  &kp RSHIFT
+&kp LEFT_CONTROL  &kp COL_Z        &kp COL_X        &kp COL_C         &kp COL_D          &kp COL_V  &key_repeat    &trans         &kp COL_K    &kp COL_H          &kp COL_COMMA     &kp COL_DOT      &kp COL_FSLH     &kp RIGHT_CONTROL
+                                                    &trans            &mo 5              &kp SPACE  &kp DEL        &kp BACKSPACE  &lt 4 ENTER  &mo 3              &mo 6
             >;
         };
 
@@ -207,14 +207,14 @@
 
         dia_col {
             bindings = <
-&trans  &trans            &trans              &trans             &trans         &trans                    &trans  &trans              &trans             &trans            &trans            &trans
-&trans  &trans            &trans              &trans             &trans         &trans                    &trans  &kp RA(COL_L)       &umlaut COL_U      &trans            &trans            &trans
-&trans  &hmlo LGUI COL_A  &hmlu LALT COL_A    &hmla LCTRL COL_S  &kp RA(COL_S)  &trans                    &trans  &hmra RSHIFT COL_N  &hmro RCTRL COL_E  &hmru LALT COL_O  &hmra RGUI COL_O  &trans
-&trans  &dot COL_Z        &acute COL_Z        &acute COL_C       &trans         &trans  &trans    &trans  &trans  &trans              &trans             &trans            &trans            &trans
-                                              &trans             &trans         &trans  &trans    &trans  &trans  &trans              &trans
+&trans  &trans            &trans            &trans             &trans         &trans                    &trans  &trans              &trans             &trans            &trans            &trans
+&trans  &trans            &trans            &trans             &trans         &trans                    &trans  &kp RA(COL_L)       &umlaut COL_U      &trans            &trans            &trans
+&trans  &hmlo LGUI COL_A  &hmlu LALT COL_A  &hmla LCTRL COL_S  &kp RA(COL_S)  &trans                    &trans  &hmra RSHIFT COL_N  &hmro RCTRL COL_E  &hmru LALT COL_O  &hmra RGUI COL_O  &trans
+&trans  &dot COL_Z        &acute COL_Z      &acute COL_C       &trans         &trans  &trans    &trans  &trans  &trans              &trans             &trans            &trans            &trans
+                                            &trans             &trans         &trans  &trans    &trans  &trans  &trans              &trans
             >;
         };
-        
+
         sym {
             bindings = <
 &trans  &trans     &trans       &trans       &trans             &trans                          &trans  &trans  &trans  &trans  &trans  &trans
