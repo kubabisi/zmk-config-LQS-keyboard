@@ -146,14 +146,14 @@
         ogonek: col_ogon {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp RA(G) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "COL_OGON";
+            bindings = <&kp RA(COL_G) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "OGONEK";
         };
 
         acute: acute {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp RA(T) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&kp RA(COL_T) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "ACUTE";
         };
 
@@ -167,7 +167,7 @@
         umlaut: umlaut {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp RA(D) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&kp RA(COL_D) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "UMLAUT";
         };
     };
@@ -207,11 +207,11 @@
 
         dia_col {
             bindings = <
-&trans  &trans           &trans               &trans            &trans        &trans                    &trans  &trans             &trans            &trans           &trans           &trans
-&trans  &trans           &trans               &trans            &trans        &trans                    &trans  &kp RA(L)          &trans            &trans           &trans           &trans
-&trans  &hmlo LGUI PL_A  &hmlu LALT RA(PL_A)  &hmla LCTRL PL_S  &kp RA(PL_S)  &trans                    &trans  &hmra RSHIFT PL_N  &hmro RCTRL PL_E  &hmru LALT PL_O  &hmra RGUI PL_O  &trans
-&trans  &dot PL_Z        &acute PL_Z          &trans            &trans        &trans  &trans    &trans  &trans  &trans             &trans            &trans           &trans           &trans
-                                              &trans            &trans        &trans  &trans    &trans  &trans  &trans             &trans
+&trans  &trans            &trans                &trans             &trans         &trans                    &trans  &trans              &trans             &trans            &trans            &trans
+&trans  &trans            &trans                &trans             &trans         &trans                    &trans  &kp RA(L)           &trans             &trans            &trans            &trans
+&trans  &hmlo LGUI COL_A  &hmlu LALT RA(COL_A)  &hmla LCTRL COL_S  &kp RA(COL_S)  &trans                    &trans  &hmra RSHIFT COL_N  &hmro RCTRL COL_E  &hmru LALT COL_O  &hmra RGUI COL_O  &trans
+&trans  &dot COL_Z        &acute COL_Z          &trans             &trans         &trans  &trans    &trans  &trans  &trans              &trans             &trans            &trans            &trans
+                                                &trans             &trans         &trans  &trans    &trans  &trans  &trans              &trans
             >;
         };
 
