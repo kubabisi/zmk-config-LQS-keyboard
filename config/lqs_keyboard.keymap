@@ -208,7 +208,7 @@
         dia_col {
             bindings = <
 &trans  &trans            &trans              &trans             &trans         &trans                    &trans  &trans              &trans             &trans            &trans            &trans
-&trans  &trans            &trans              &trans             &trans         &trans                    &trans  &kp RA(COL_L)       &trans             &trans            &trans            &trans
+&trans  &trans            &trans              &trans             &trans         &trans                    &trans  &kp RA(COL_L)       &umlaut COL_U      &trans            &trans            &trans
 &trans  &hmlo LGUI COL_A  &hmlu LALT COL_A    &hmla LCTRL COL_S  &kp RA(COL_S)  &trans                    &trans  &hmra RSHIFT COL_N  &hmro RCTRL COL_E  &hmru LALT COL_O  &hmra RGUI COL_O  &trans
 &trans  &dot COL_Z        &acute COL_Z        &acute COL_C       &trans         &trans  &trans    &trans  &trans  &trans              &trans             &trans            &trans            &trans
                                               &trans             &trans         &trans  &trans    &trans  &trans  &trans              &trans
